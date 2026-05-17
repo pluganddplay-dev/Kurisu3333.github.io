@@ -1,14 +1,15 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0F0F23" />
-  <title>Plug &amp; Play — Immersive Sound. Flawless Vision. | Kuching, Sarawak</title>
+  <title>Plug &amp; Play â€” Immersive Sound. Flawless Vision. | Kuching, Sarawak</title>
   <meta name="description" content="Premium home theater, professional KTV systems, and commercial AV solutions in Kuching, Sarawak. Engineered for immersive sound and flawless vision." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -48,7 +49,7 @@
       --color-text: #F8FAFC;
     }
 
-    /* Global reset — guarantees zero horizontal scroll at every breakpoint */
+    /* Global reset â€” guarantees zero horizontal scroll at every breakpoint */
     *, *::before, *::after { box-sizing: border-box; }
     html, body { overflow-x: hidden; max-width: 100%; }
     img, svg, video, iframe { max-width: 100%; }
@@ -72,7 +73,7 @@
     }
     p, blockquote, li, figcaption { text-wrap: pretty; line-height: 1.55; }
 
-    /* Fluid display sizes — per spec */
+    /* Fluid display sizes â€” per spec */
     .h-display-xl { font-size: clamp(2rem, 6vw, 4.5rem); line-height: 1.06; }
     .h-display-lg { font-size: clamp(1.5rem, 4vw, 3rem); line-height: 1.12; }
     .h-display-md { font-size: clamp(1.25rem, 3vw, 2rem); line-height: 1.2; }
@@ -80,7 +81,7 @@
     /* Fluid body / lead sizes */
     .lead { font-size: clamp(0.875rem, 2.5vw, 1.125rem); line-height: 1.6; }
 
-    /* Touch targets — ensure min 44x44 thumb area on mobile controls */
+    /* Touch targets â€” ensure min 44x44 thumb area on mobile controls */
     .btn { min-height: 44px; }
     .tap { min-height: 44px; min-width: 44px; }
 
@@ -229,7 +230,28 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
   section { padding-top: 6rem; padding-bottom: 6rem; padding-left: 5rem; padding-right: 5rem; }
   .card-grid, .gallery-grid { grid-template-columns: repeat(3, 1fr); }
 }
-  </style>
+  
+    nav#navbar.scrolled nav {
+      background: rgba(15,15,35,0.97) !important;
+      backdrop-filter: blur(20px) !important;
+      box-shadow: 0 1px 0 rgba(201,168,76,0.2);
+    }
+    .tile::after {
+      content: "View Project →";
+      position: absolute; inset: 0;
+      background: rgba(201,168,76,0.12);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.95rem; font-weight: 600; letter-spacing: 0.1em;
+      color: #F0C75B; opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+    .tile:hover::after { opacity: 1; }
+  
+    /* Tile grid stretch fix */
+    #work .grid { align-items: stretch; }
+    #work .grid > a { display: flex; flex-direction: column; }
+    #work .grid > a > div { flex: 1; }</style>
 </head>
 <body class="min-h-screen">
 
@@ -316,7 +338,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
           </h1>
 
           <p class="mt-5 sm:mt-6 max-w-xl lead text-white/70 leading-relaxed">
-            Bespoke home theaters, professional KTV systems, and commercial AV — engineered, installed, and tuned by specialists who treat every room like a concert hall.
+            Bespoke home theaters, professional KTV systems, and commercial AV â€” engineered, installed, and tuned by specialists who treat every room like a concert hall.
           </p>
 
           <div class="mt-8 sm:mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
@@ -330,7 +352,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
             </a>
           </div>
 
-          <!-- Trust strip — stacked on mobile, inline on tablet+ -->
+          <!-- Trust strip â€” stacked on mobile, inline on tablet+ -->
           <ul class="mt-10 sm:mt-12 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-x-8 sm:gap-y-3 text-sm text-white/65">
             <li class="flex items-center gap-2.5 w-full sm:w-auto">
               <svg viewBox="0 0 24 24" fill="none" stroke="#E0A622" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0"><path d="M20 6 9 17l-5-5"/></svg>
@@ -347,14 +369,14 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
           </ul>
         </div>
 
-        <!-- Hero visual — hidden on mobile to prevent overflow + tall empty gap -->
+        <!-- Hero visual â€” hidden on mobile to prevent overflow + tall empty gap -->
         <div class="hidden md:block lg:col-span-5 reveal reveal-delay-2">
           <div class="relative">
             <div class="absolute -inset-4 bg-gradient-to-br from-gold/30 via-transparent to-primary-400/30 blur-2xl rounded-[2rem]"></div>
             <div class="relative glass-strong rounded-[1.75rem] p-3 shadow-glow-cool">
               <div class="relative aspect-[4/5] sm:aspect-[5/6] lg:aspect-[4/5] overflow-hidden rounded-2xl bg-ink-900">
                 <img
-                  src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=1400&q=80"
+                  src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80"
                   alt="Cinematic home theater with ambient lighting and recessed acoustic panels"
                   class="absolute inset-0 h-full w-full object-cover" loading="eager" />
                 <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/40 to-transparent"></div>
@@ -391,19 +413,19 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
             <!-- Equipment ticker -->
             <div class="relative mt-6 overflow-hidden glass rounded-2xl">
               <div class="flex gap-10 px-5 py-3 marquee whitespace-nowrap text-xs sm:text-sm uppercase tracking-[0.22em] text-white/55">
-                <span>Dolby Atmos</span><span>•</span>
-                <span>JBL Synthesis</span><span>•</span>
-                <span>BenQ 4K</span><span>•</span>
-                <span>Denon</span><span>•</span>
-                <span>BMB Pro KTV</span><span>•</span>
-                <span>Sony Bravia</span><span>•</span>
-                <span>Anthem AVM</span><span>•</span>
-                <span>Dolby Atmos</span><span>•</span>
-                <span>JBL Synthesis</span><span>•</span>
-                <span>BenQ 4K</span><span>•</span>
-                <span>Denon</span><span>•</span>
-                <span>BMB Pro KTV</span><span>•</span>
-                <span>Sony Bravia</span><span>•</span>
+                <span>Dolby Atmos</span><span>â€¢</span>
+                <span>JBL Synthesis</span><span>â€¢</span>
+                <span>BenQ 4K</span><span>â€¢</span>
+                <span>Denon</span><span>â€¢</span>
+                <span>BMB Pro KTV</span><span>â€¢</span>
+                <span>Sony Bravia</span><span>â€¢</span>
+                <span>Anthem AVM</span><span>â€¢</span>
+                <span>Dolby Atmos</span><span>â€¢</span>
+                <span>JBL Synthesis</span><span>â€¢</span>
+                <span>BenQ 4K</span><span>â€¢</span>
+                <span>Denon</span><span>â€¢</span>
+                <span>BMB Pro KTV</span><span>â€¢</span>
+                <span>Sony Bravia</span><span>â€¢</span>
                 <span>Anthem AVM</span>
               </div>
             </div>
@@ -426,7 +448,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
     <div class="absolute -right-32 bottom-10 h-80 w-80 rounded-full bg-gold/10 blur-3xl"></div>
 
     <div class="relative mx-auto max-w-7xl px-6 sm:px-12 lg:px-20">
-      <div class="max-w-3xl reveal">
+      <div class="max-w-3xl reveal" data-aos="fade-up">
         <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-gold-300">
           <span class="h-px w-8 bg-gold/60"></span> Our Disciplines
         </span>
@@ -434,13 +456,13 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
           Three pillars of <span class="text-gold-gradient whitespace-nowrap">audio-visual mastery.</span>
         </h2>
         <p class="mt-5 text-white/65 lead max-w-2xl">
-          From the cinema in your basement to the boardroom at your headquarters — we design, build, and calibrate end-to-end systems that disappear into the room and stay with the moment.
+          From the cinema in your basement to the boardroom at your headquarters â€” we design, build, and calibrate end-to-end systems that disappear into the room and stay with the moment.
         </p>
       </div>
 
       <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         <!-- Card 1: Home Theater -->
-        <article class="relative card-glow glass rounded-3xl p-7 sm:p-8 cursor-pointer reveal">
+        <article class="relative card-glow glass rounded-3xl p-7 sm:p-8 cursor-pointer reveal" data-aos="fade-up" data-aos-delay="0">
           <div class="flex items-start justify-between">
             <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-gold-400/20 to-gold/10 ring-1 ring-gold/30">
               <!-- Lucide: clapperboard -->
@@ -470,7 +492,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
         </article>
 
         <!-- Card 2: KTV / Karaoke -->
-        <article class="relative card-glow glass rounded-3xl p-7 sm:p-8 cursor-pointer reveal reveal-delay-1">
+        <article class="relative card-glow glass rounded-3xl p-7 sm:p-8 cursor-pointer reveal reveal-delay-1" data-aos="fade-up" data-aos-delay="120">
           <div class="flex items-start justify-between">
             <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-400/30 to-secondary/20 ring-1 ring-primary-400/40">
               <!-- Lucide: mic-vocal -->
@@ -485,7 +507,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
           </div>
           <h3 class="mt-7 font-display font-bold text-2xl">Professional KTV</h3>
           <p class="mt-3 text-white/65 text-sm leading-relaxed">
-            Pro-grade karaoke rooms for homes, lounges, and entertainment venues — built on studio mics, BMB-class speakers, and an evergreen library with weekly track updates.
+            Pro-grade karaoke rooms for homes, lounges, and entertainment venues â€” built on studio mics, BMB-class speakers, and an evergreen library with weekly track updates.
           </p>
           <ul class="mt-6 space-y-2.5 text-sm text-white/70">
             <li class="flex items-start gap-2.5"><svg viewBox="0 0 24 24" fill="none" stroke="#E0A622" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 h-4 w-4 shrink-0"><path d="M20 6 9 17l-5-5"/></svg> 60,000+ track multi-language library</li>
@@ -502,7 +524,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
         </article>
 
         <!-- Card 3: Commercial AV -->
-        <article class="relative card-glow glass rounded-3xl p-7 sm:p-8 cursor-pointer reveal reveal-delay-2">
+        <article class="relative card-glow glass rounded-3xl p-7 sm:p-8 cursor-pointer reveal reveal-delay-2" data-aos="fade-up" data-aos-delay="240">
           <div class="flex items-start justify-between">
             <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-white/15 to-white/5 ring-1 ring-white/20">
               <!-- Lucide: presentation -->
@@ -514,7 +536,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
           </div>
           <h3 class="mt-7 font-display font-bold text-2xl">Commercial AV</h3>
           <p class="mt-3 text-white/65 text-sm leading-relaxed">
-            Restaurants, boardrooms, hotels, houses of worship, and event spaces — integrated audio zoning, digital signage, and conferencing systems that just work.
+            Restaurants, boardrooms, hotels, houses of worship, and event spaces â€” integrated audio zoning, digital signage, and conferencing systems that just work.
           </p>
           <ul class="mt-6 space-y-2.5 text-sm text-white/70">
             <li class="flex items-start gap-2.5"><svg viewBox="0 0 24 24" fill="none" stroke="#E0A622" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 h-4 w-4 shrink-0"><path d="M20 6 9 17l-5-5"/></svg> Multi-zone audio &amp; paging</li>
@@ -559,7 +581,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
               </span>
               <div>
                 <h4 class="font-display font-semibold">Engineer-led design</h4>
-                <p class="text-sm text-white/60 mt-1">Acoustic modelling, sightline mapping, and EQ calibration — all before the first cable is pulled.</p>
+                <p class="text-sm text-white/60 mt-1">Acoustic modelling, sightline mapping, and EQ calibration â€” all before the first cable is pulled.</p>
               </div>
             </div>
             <div class="flex items-start gap-3 glass rounded-2xl p-4">
@@ -568,7 +590,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
               </span>
               <div>
                 <h4 class="font-display font-semibold">Showroom you can demo</h4>
-                <p class="text-sm text-white/60 mt-1">Hear the difference between systems in person — Atmos cinema, KTV suite, and signage wall on-site in Kuching.</p>
+                <p class="text-sm text-white/60 mt-1">Hear the difference between systems in person â€” Atmos cinema, KTV suite, and signage wall on-site in Kuching.</p>
               </div>
             </div>
             <div class="flex items-start gap-3 glass rounded-2xl p-4">
@@ -577,7 +599,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
               </span>
               <div>
                 <h4 class="font-display font-semibold">Lifetime support &amp; service</h4>
-                <p class="text-sm text-white/60 mt-1">A real phone number, a real technician, and on-call response across Sarawak — long after handover.</p>
+                <p class="text-sm text-white/60 mt-1">A real phone number, a real technician, and on-call response across Sarawak â€” long after handover.</p>
               </div>
             </div>
           </div>
@@ -626,7 +648,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
 
     <div class="relative mx-auto max-w-7xl px-6 sm:px-12 lg:px-20">
       <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 reveal">
-        <div class="max-w-2xl">
+        <div class="max-w-2xl" data-aos="fade-up">
           <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-gold-300">
             <span class="h-px w-8 bg-gold/60"></span> Selected Projects
           </span>
@@ -641,40 +663,40 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
 
       <div class="mt-12 grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Tile 1 (large) -->
-        <a href="#contact" class="tile glass rounded-3xl reveal sm:col-span-2 lg:row-span-2 group cursor-pointer block">
+        <a href="#contact" class="tile glass rounded-3xl reveal sm:col-span-2 lg:row-span-2 group cursor-pointer block" data-aos="fade-up">
           <div class="relative aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/5]">
-            <img src="https://images.unsplash.com/photo-1635002962487-2c1d4d2f63c2?auto=format&fit=crop&w=1600&q=80" alt="Private home cinema with Atmos ceiling speakers" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80" alt="Elegant private cinema hall with tiered seating" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-transparent"></div>
             <span class="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] text-white/80">Home Theater</span>
             <div class="absolute inset-x-5 bottom-5 tile-meta">
               <h3 class="font-display font-bold text-2xl sm:text-3xl">Hilltop Atmos Cinema</h3>
-              <p class="mt-1 text-white/70 text-sm">Petra Jaya, Kuching · 9.4.6 Dolby Atmos · Acoustic panelling</p>
+              <p class="mt-1 text-white/70 text-sm">Petra Jaya, Kuching Â· 9.4.6 Dolby Atmos Â· Acoustic panelling</p>
             </div>
           </div>
         </a>
 
         <!-- Tile 2 -->
-        <a href="#contact" class="tile glass rounded-3xl reveal reveal-delay-1 group cursor-pointer block">
-          <div class="relative aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1571266028243-d220c6a7c3a4?auto=format&fit=crop&w=1200&q=80" alt="KTV room with neon ambient lighting and large screen" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+        <a href="#contact" class="tile glass rounded-3xl reveal reveal-delay-1 group cursor-pointer block h-full" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative h-full min-h-[240px]">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80" alt="KTV lounge with vibrant ambient lighting and entertainment setup" class="absolute inset-0 h-full w-full object-cover object-center" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-transparent"></div>
             <span class="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] text-white/80">KTV</span>
             <div class="absolute inset-x-5 bottom-5 tile-meta">
               <h3 class="font-display font-bold text-xl">Sapphire VIP Lounge</h3>
-              <p class="mt-1 text-white/70 text-sm">12-room commercial KTV · BMB Pro</p>
+              <p class="mt-1 text-white/70 text-sm">12-room commercial KTV Â· BMB Pro</p>
             </div>
           </div>
         </a>
 
         <!-- Tile 3 -->
-        <a href="#contact" class="tile glass rounded-3xl reveal reveal-delay-2 group cursor-pointer block">
-          <div class="relative aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=80" alt="Modern restaurant interior with integrated speakers and ambient lighting" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+        <a href="#contact" class="tile glass rounded-3xl reveal reveal-delay-2 group cursor-pointer block h-full" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative h-full min-h-[240px]">
+            <img src="https://images.unsplash.com/photo-1571130961933-0680ba8d5ff2?auto=format&fit=crop&w=1200&q=80" alt="Commercial restaurant interior with ambient BGM audio system" class="absolute inset-0 h-full w-full object-cover object-center" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-transparent"></div>
             <span class="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] text-white/80">Commercial</span>
             <div class="absolute inset-x-5 bottom-5 tile-meta">
               <h3 class="font-display font-bold text-xl">The Waterfront Bistro</h3>
-              <p class="mt-1 text-white/70 text-sm">Multi-zone dining audio · BGM scheduling</p>
+              <p class="mt-1 text-white/70 text-sm">Multi-zone dining audio Â· BGM scheduling</p>
             </div>
           </div>
         </a>
@@ -682,25 +704,25 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
         <!-- Tile 4 -->
         <a href="#contact" class="tile glass rounded-3xl reveal group cursor-pointer block">
           <div class="relative aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1200&q=80" alt="Boardroom with large display and video conferencing equipment" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80" alt="Corporate boardroom with wall-mounted display and AV conferencing system" class="absolute inset-0 h-full w-full object-cover object-center" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-transparent"></div>
             <span class="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] text-white/80">Boardroom</span>
             <div class="absolute inset-x-5 bottom-5 tile-meta">
               <h3 class="font-display font-bold text-xl">Sarawak Energy HQ</h3>
-              <p class="mt-1 text-white/70 text-sm">Hybrid conferencing · Microsoft Teams Rooms</p>
+              <p class="mt-1 text-white/70 text-sm">Hybrid conferencing Â· Microsoft Teams Rooms</p>
             </div>
           </div>
         </a>
 
         <!-- Tile 5 -->
-        <a href="#contact" class="tile glass rounded-3xl reveal reveal-delay-1 group cursor-pointer block">
-          <div class="relative aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="Premium living room with large flatscreen and integrated AV" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+        <a href="#contact" class="tile glass rounded-3xl reveal reveal-delay-1 group cursor-pointer block h-full" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative h-full min-h-[240px]">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80" alt="Premium living room with wall-mounted TV and in-wall speaker system" class="absolute inset-0 h-full w-full object-cover object-center" loading="lazy" />
             <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-transparent"></div>
             <span class="absolute top-4 left-4 inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] text-white/80">Living Theatre</span>
             <div class="absolute inset-x-5 bottom-5 tile-meta">
               <h3 class="font-display font-bold text-xl">The Tabuan Residence</h3>
-              <p class="mt-1 text-white/70 text-sm">In-wall 5.1.4 · Smart home integration</p>
+              <p class="mt-1 text-white/70 text-sm">In-wall 5.1.4 Â· Smart home integration</p>
             </div>
           </div>
         </a>
@@ -722,7 +744,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
     <div class="absolute -left-32 bottom-20 h-72 w-72 rounded-full bg-primary-400/20 blur-3xl"></div>
 
     <div class="relative mx-auto max-w-7xl px-6 sm:px-12 lg:px-20">
-      <div class="max-w-3xl reveal">
+      <div class="max-w-3xl reveal" data-aos="fade-up">
         <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-gold-300">
           <span class="h-px w-8 bg-gold/60"></span> Client Reflections
         </span>
@@ -731,7 +753,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
         </h2>
       </div>
 
-      <!-- Mobile: snap-x carousel · md+: 2 / 3 col grid -->
+      <!-- Mobile: snap-x carousel Â· md+: 2 / 3 col grid -->
       <div class="relative mt-10 sm:mt-12">
         <div id="testimonialTrack" class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none scroll-px-4 -mx-4 px-4 md:mx-0 md:px-0 pb-6 md:pb-0 scrollbar-hide" role="region" aria-label="Client testimonials" tabindex="0">
         <figure class="testimonial snap-center shrink-0 w-[86vw] sm:w-[60vw] md:w-auto md:shrink glass card-glow rounded-3xl p-6 sm:p-7 reveal">
@@ -743,13 +765,13 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
             <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
           <blockquote class="mt-5 text-white/85 leading-relaxed">
-            &ldquo;The team didn&apos;t just install equipment — they engineered the entire room. The Atmos calibration is sublime, and the handover documentation was the most thorough I&apos;ve seen.&rdquo;
+            &ldquo;The team didn&apos;t just install equipment â€” they engineered the entire room. The Atmos calibration is sublime, and the handover documentation was the most thorough I&apos;ve seen.&rdquo;
           </blockquote>
           <figcaption class="mt-6 flex items-center gap-3">
             <span class="h-10 w-10 rounded-full bg-gradient-to-br from-gold-300 to-gold ring-2 ring-ink-900 flex items-center justify-center font-display font-bold text-ink-900">DT</span>
             <span>
               <span class="block font-display font-semibold">Datuk T. Wong</span>
-              <span class="block text-xs text-white/55">Private Residence · Petra Jaya</span>
+              <span class="block text-xs text-white/55">Private Residence Â· Petra Jaya</span>
             </span>
           </figcaption>
         </figure>
@@ -769,7 +791,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
             <span class="h-10 w-10 rounded-full bg-gradient-to-br from-primary-400 to-secondary ring-2 ring-ink-900 flex items-center justify-center font-display font-bold">SL</span>
             <span>
               <span class="block font-display font-semibold">Steven Lau</span>
-              <span class="block text-xs text-white/55">Owner · Sapphire VIP KTV Lounge</span>
+              <span class="block text-xs text-white/55">Owner Â· Sapphire VIP KTV Lounge</span>
             </span>
           </figcaption>
         </figure>
@@ -789,7 +811,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
             <span class="h-10 w-10 rounded-full bg-gradient-to-br from-white/40 to-white/10 ring-2 ring-ink-900 flex items-center justify-center font-display font-bold">AR</span>
             <span>
               <span class="block font-display font-semibold">Aisyah Rahman</span>
-              <span class="block text-xs text-white/55">Facilities Lead · Energy Sector HQ</span>
+              <span class="block text-xs text-white/55">Facilities Lead Â· Energy Sector HQ</span>
             </span>
           </figcaption>
         </figure>
@@ -850,7 +872,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
               <div>
                 <div class="text-xs uppercase tracking-[0.22em] text-white/45">Phone &amp; WhatsApp</div>
                 <div class="mt-1 font-display font-semibold">+60 13-832 0303</div>
-                <div class="text-sm text-white/65">Mon – Sat · 9:00 AM – 6:30 PM</div>
+                <div class="text-sm text-white/65">Mon â€“ Sat Â· 9:00 AM â€“ 6:30 PM</div>
               </div>
             </a>
 
@@ -915,7 +937,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
             </div>
 
             <div data-confirm class="hidden mt-5 rounded-xl border border-gold/40 bg-gold/10 px-4 py-3 text-sm text-gold-200">
-              Thank you — we&apos;ve received your enquiry and will be in touch within one working day.
+              Thank you â€” we&apos;ve received your enquiry and will be in touch within one working day.
             </div>
           </form>
 
@@ -923,7 +945,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
           <div class="mt-6 glass rounded-3xl overflow-hidden">
             <div class="relative aspect-[16/8] sm:aspect-[16/7]">
               <iframe
-                title="Plug and Play location — Kuching, Sarawak"
+                title="Plug and Play location â€” Kuching, Sarawak"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4855.62612363736!2d110.36293197496606!3d1.5467522984387891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31fba7ba69eabd91%3A0xa12e7e518cc6471c!2sPlug%20And%20Play%20AV%20Company%20%2F%20Pro%20Sound%20Vision%20Company!5e1!3m2!1sen!2smy!4v1778638309708!5m2!1sen!2smy"
                 class="absolute inset-0 h-full w-full"
                 style="filter: invert(0.9) hue-rotate(190deg) saturate(0.7) contrast(0.95);"
@@ -1005,7 +1027,7 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
       <div class="mt-14 hairline"></div>
       <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
         <p>&copy; 2026 Plug &amp; Play Perfect Sound &amp; Vision Company. All rights reserved.</p>
-        <p>Crafted in Kuching · Tuned for the night.</p>
+        <p>Crafted in Kuching Â· Tuned for the night.</p>
       </div>
     </div>
   </footer>
@@ -1099,5 +1121,55 @@ h1, h2, h3, h4, h5, h6 { text-wrap: balance; }
       counters.forEach(c => io.observe(c));
     })();
   </script>
+
+  <!-- AOS + Awwwards upgrades -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Init AOS
+    AOS.init({ duration: 750, once: true, offset: 60, easing: "ease-out-cubic" });
+
+    // Navbar gold border on scroll
+    (function(){
+      const hdr = document.getElementById("navbar");
+      if (!hdr) return;
+      window.addEventListener("scroll", () => {
+        hdr.classList.toggle("scrolled", window.scrollY > 60);
+      }, { passive: true });
+    })();
+
+    // Testimonial dots + arrows (mobile)
+    (function(){
+      const track = document.getElementById("testimonialTrack");
+      const dotsWrap = document.getElementById("testimonialDots");
+      if (!track || !dotsWrap) return;
+      const cards = Array.from(track.querySelectorAll(".testimonial"));
+      const total = cards.length;
+      let active = 0;
+      const dots = cards.map((_, i) => {
+        const d = document.createElement("button");
+        d.className = "h-1.5 rounded-full transition-all duration-300 " + (i === 0 ? "w-5 bg-gold" : "w-1.5 bg-white/25");
+        d.setAttribute("aria-label", "Go to testimonial " + (i+1));
+        d.addEventListener("click", () => scrollTo(i));
+        dotsWrap.appendChild(d);
+        return d;
+      });
+      function scrollTo(i) {
+        active = i;
+        cards[i].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        dots.forEach((d, j) => {
+          d.className = "h-1.5 rounded-full transition-all duration-300 " + (j === i ? "w-5 bg-gold" : "w-1.5 bg-white/25");
+        });
+      }
+      document.querySelector("[data-testimonial-prev]")?.addEventListener("click", () => scrollTo((active - 1 + total) % total));
+      document.querySelector("[data-testimonial-next]")?.addEventListener("click", () => scrollTo((active + 1) % total));
+    })();
+  </script>
 </body>
 </html>
+
+
+
+
+
+
+
