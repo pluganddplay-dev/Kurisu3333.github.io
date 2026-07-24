@@ -1,0 +1,14 @@
+{
+  "name": "pro-sound-vision",
+  "version": "1.0.0",
+  "description": "Landing page for Pro Sound Vision / Plug & Play (Kuching, Sarawak).",
+  "private": true,
+  "scripts": {
+    "start": "eleventy --serve",
+    "serve": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

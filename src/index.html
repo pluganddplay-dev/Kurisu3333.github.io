@@ -1,0 +1,24 @@
+---
+layout: base.njk
+---
+<!-- =========================================================================
+     PAGE MAP — each section below lives in its own file under
+     src/_includes/sections/. To edit a part of the page, open the file named
+     in its include. Order here is the order they appear on the page.
+     ========================================================================= -->
+
+<!-- Skip to content (accessibility) -->
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-md focus:bg-gold focus:text-ink-900 focus:px-3 focus:py-2 focus:font-semibold">Skip to content</a>
+
+{% include "sections/navbar.html" %}
+
+<main id="main">
+  {% include "sections/hero.html" %}
+  {% include "sections/services.html" %}
+  {% include "sections/why-us.html" %}
+  {% include "sections/projects.html" %}
+  {% include "sections/testimonials.html" %}
+  {% include "sections/contact.html" %}
+</main>
+
+{% include "sections/footer.html" %}
